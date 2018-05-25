@@ -4,7 +4,7 @@
 
     <groupId>net.unit8.omoishiraseteyaru</groupId>
     <artifactId>omoishiraseteyaru</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.2.0</version>
     <packaging>jar</packaging>
 
     <name>思い知らせてやる</name>
@@ -12,14 +12,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <enkan.version>0.1.0-SNAPSHOT</enkan.version>
-        <enkan.jetty.version>0.1.0-SNAPSHOT</enkan.jetty.version>
-        <enkan.freemarker.version>0.1.0-SNAPSHOT</enkan.freemarker.version>
-        <enkan.flyway.version>0.1.0-SNAPSHOT</enkan.flyway.version>
-        <enkan.doma2.version>0.1.0-SNAPSHOT</enkan.doma2.version>
-        <enkan.HikariCP.version>0.1.0-SNAPSHOT</enkan.HikariCP.version>
-        <enkan.jackson.version>0.1.0-SNAPSHOT</enkan.jackson.version>
-        <kotowari.version>0.1.0-SNAPSHOT</kotowari.version>
+        <enkan.version>0.6.0-beta3</enkan.version>
     </properties>
 
     <build>
@@ -29,7 +22,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.4.0</version>
                 <configuration>
-                    <mainClass>net.unit8.omoishiraseteyaru.Main</mainClass>
+                    <mainClass>net.unit8.omoishiraseteyaru.ReplMain</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -68,54 +61,38 @@
         <dependency>
             <groupId>net.unit8.enkan</groupId>
             <artifactId>kotowari</artifactId>
-            <version>${kotowari.version}</version>
-        </dependency>
-                <dependency>
-            <groupId>net.unit8.enkan</groupId>
-            <artifactId>enkan-component-jetty</artifactId>
-            <version>${enkan.jetty.version}</version>
+            <version>${enkan.version}</version>
         </dependency>
         <dependency>
             <groupId>net.unit8.enkan</groupId>
-            <artifactId>enkan-component-doma2</artifactId>
-            <version>${enkan.doma2.version}</version>
+            <artifactId>enkan-component-undertow</artifactId>
+            <version>${enkan.version}</version>
         </dependency>
         <dependency>
             <groupId>net.unit8.enkan</groupId>
             <artifactId>enkan-component-jackson</artifactId>
-            <version>${enkan.jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.unit8.enkan</groupId>
-            <artifactId>enkan-component-HikariCP</artifactId>
-            <version>${enkan.HikariCP.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.unit8.enkan</groupId>
-            <artifactId>enkan-component-flyway</artifactId>
-            <version>${enkan.flyway.version}</version>
+            <version>${enkan.version}</version>
         </dependency>
         <dependency>
             <groupId>net.unit8.enkan</groupId>
             <artifactId>enkan-component-freemarker</artifactId>
-            <version>${enkan.freemarker.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.189</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.6</version>
-            <scope>provided</scope>
+            <version>${enkan.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.12</version>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.unit8.enkan</groupId>
+            <artifactId>enkan-repl-pseudo</artifactId>
+            <version>${enkan.version}</version>
         </dependency>
     </dependencies>
 </project>

@@ -23,13 +23,12 @@ public class IndexController {
             return templateEngine.render("form",
                     "tweet", form);
         }
-        StringBuilder body = new StringBuilder();
-        body.append("よし、").append(form.getWhere())
-                .append("\nどれ、").append(form.getWhat())
-                .append("を").append(form.getWhom())
-                .append("に思い知らせてやるわ〜ww");
+        String body = "よし、" + form.getWhere() +
+                "\nどれ、" + form.getWhat() +
+                "を" + form.getWhom() +
+                "に思い知らせてやるわ〜ww";
 
         return HttpResponseUtils.redirect("https://twitter.com/intent/tweet?text="
-                + CodecUtils.urlEncode(body.toString()), SEE_OTHER);
+                + CodecUtils.urlEncode(body), SEE_OTHER);
     }
 }

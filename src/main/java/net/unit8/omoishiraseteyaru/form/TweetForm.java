@@ -1,18 +1,38 @@
 package net.unit8.omoishiraseteyaru.form;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * @author kawasima
  */
-@Data
 public class TweetForm extends FormBase {
-    @NotBlank
     private String where;
-    @NotBlank
     private String what;
-    @NotBlank
     private String whom;
 
+    public String getWhere() {
+        return where;
+    }
+
+    public void setWhere(String where) {
+        this.where = where;
+    }
+
+    public String getWhat() {
+        return what;
+    }
+
+    public void setWhat(String what) {
+        this.what = what;
+    }
+
+    public String getWhom() {
+        return whom;
+    }
+
+    public void setWhom(String whom) {
+        this.whom = whom;
+    }
 }
