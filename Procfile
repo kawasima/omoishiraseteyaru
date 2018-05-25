@@ -1,1 +1,1 @@
-web: java -jar 思い知らせてやる.war
+web: java -jar omoishiraseteyaru.war
