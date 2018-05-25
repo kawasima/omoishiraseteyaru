@@ -1,9 +1,5 @@
 package net.unit8.omoishiraseteyaru.form;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import org.hibernate.validator.constraints.NotBlank;
-
 /**
  * @author kawasima
  */
