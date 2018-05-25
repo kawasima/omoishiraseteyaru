@@ -36,7 +36,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <outputFile>思い知らせてやる.war</outputFile>
+                    <outputFile>omoishiraseteyaru.war</outputFile>
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                             <mainClass>net.unit8.omoishiraseteyaru.Main</mainClass>
